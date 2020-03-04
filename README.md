@@ -1,0 +1,2 @@
+# Treble
+Discord Music Bot
