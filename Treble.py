@@ -1,10 +1,15 @@
 import sys
 import traceback
+import json
 
 import discord
 from discord.ext import commands
 
-token = ''
+# Reads json file that has config and retrieves token from the file
+with open('config.json', 'r') as configfile:
+    data = configfile.read()
+config = json.loads(data)
+token = str(config['token'])
 
 
 # Allows bot to be mentioned or have multiple prefixes to call a command
@@ -17,7 +22,7 @@ def get_prefix(bot, message):
 
 # List of cogs to be loaded
 cogs = [
-
+    'cogs.spotify'
 ]
 
 # Loads all the cogs
