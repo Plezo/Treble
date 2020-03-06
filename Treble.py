@@ -7,9 +7,8 @@ from discord.ext import commands
 
 # Reads json file that has config and retrieves token from the file
 with open('config.json', 'r') as configfile:
-    data = configfile.read()
-config = json.loads(data)
-token = str(config['token'])
+    configData = configfile.read()
+config = json.loads(configData)
 
 
 # Allows bot to be mentioned or have multiple prefixes to call a command
@@ -22,7 +21,8 @@ def get_prefix(bot, message):
 
 # List of cogs to be loaded
 cogs = [
-    'cogs.spotify'
+    'cogs.spotify',
+    'cogs.meme'
 ]
 
 # Loads all the cogs
@@ -42,4 +42,4 @@ async def on_ready():
     print('Logged in as {} with ID {}'.format(bot.user.name, bot.user.id))
     await bot.change_presence(activity=discord.Game(' music.'))
 
-bot.run(token)
+bot.run("Njg0NjI1MzUwMDAwMzc3ODY3.XmBUeg.vT7NKwa9y28adr5N9Vwsqerq6HQ")
