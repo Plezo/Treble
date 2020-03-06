@@ -42,4 +42,4 @@ async def on_ready():
     print('Logged in as {} with ID {}'.format(bot.user.name, bot.user.id))
     await bot.change_presence(activity=discord.Game(' music.'))
 
-bot.run("Njg0NjI1MzUwMDAwMzc3ODY3.XmBUeg.vT7NKwa9y28adr5N9Vwsqerq6HQ")
+bot.run(config['token'])
